@@ -1,3 +1,107 @@
-<P>aaa</P>
+<html>
+<title>Bookers2Ver2</title>
 <%= link_to "トップページ",new_user_registration_path %>
 <%= link_to "logout",destroy_user_session_path,method: :delete %>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <span>Bookers</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ml-auto">
+                        <li>
+                            <a class="nav-link text-light" href="/users/123">
+                                <svg class="svg-inline--fa fa-home fa-w-18" aria-hidden="true"
+                                focusable="false" data-prefex="fas" data-icon="home" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg></svg>
+                                Home
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a class="nav-link text-light" href="/users">
+                                <svg class="svg-inline--fa fa-users fa-w-20" aria-hidden="true"
+                                focusable="false" data-prefex="fas" data-icon="users" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg></svg>
+                                Users
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a class="nav-link text-light" href="/books">
+                                <svg class="svg-inline--fa fa-book-open fa-w-18" aria-hidden="true"
+                                focusable="false" data-prefex="fas" data-icon="book-open" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg></svg>
+                                Books
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a class="nav-link text-light"  rel="nofollow" data-method="delete" href="/users/sign out">
+                                <svg class="svg-inline--fa fa-sign-out-alt fa-w-16" aria-hidden="true"
+                                focusable="false" data-prefex="fas" data-icon="sign-out-alt" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg></svg>
+                                Log out
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <p id="notice"></p>
+        <div class="container">
+            <div class="row">
+                <div class="mx-auto col-11 col-sm-10 col-lg-8 col-xl-6">
+                    <h1>
+                        welcome to
+                        <svg class="svg-inline--fa fa-book fa-w-14" aria-hidden="true"
+                        focusable="false" data-prefix="fas" data-icon="book" role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg></svg>
+                            <strong>Bookers</strong>
+                            !!
+                    </h1>
+                    <p>
+                        In
+                        <svg class="svg-inline--fa fa-book fa-w-14" aria-hidden="true"
+                        focusable="false" data-prefix="fas" data-icon="book"
+                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                        data-fa-i2svg></svg>
+                        <strong>Bookers</strong>
+                    ","
+                      </p>
+                      <p>you can share and exchange your opinions,inpressions,and emotions</p>
+                      <p>about various books!</p>
+                      <div class="btn-wrapper col-10 mx-auto">
+                          <div class="row">
+                              <a class="btn btn-success btn-sm btn-block sign_up"
+                              href="/users/sign in">Log in</a>
+                          </div>
+                          <div class="row">
+                              <a class="btn btn-success btn-sm btn-block sign_up"
+                              href="users/sign up">Sign up</a>
+                          </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="mx-auto">
+                    <p>CopyRight Infratop.inc</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
