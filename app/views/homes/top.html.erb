@@ -1,9 +1,12 @@
-<html>
-<title>Bookers2Ver2</title>
-<%= link_to "トップページ",new_user_registration_path %>
-<%= link_to "logout",destroy_user_session_path,method: :delete %>
-<body>
-    <header>
+<!DOCTYPE html>
+<html class="fontawesome-i2svg-active fontawesome-i2svg-complete">
+<head
+    <link rel ="stylesheet" media="all" href="/assets/stylesheets/homes.scss">
+    <title>Bookers2Ver2</title>
+    <%= link_to "トップページ",new_user_registration_path %>
+    <%= link_to "logout",destroy_user_session_path,method: :delete %>
+    <body>
+      <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="/">
@@ -44,7 +47,7 @@
                         </li>
                         
                         <li>
-                            <a class="nav-link text-light"  rel="nofollow" data-method="delete" href="/users/sign out">
+                            <a class="nav-link text-light"  rel="nofollow" data-method="delete" href="/users/sign_out">
                                 <svg class="svg-inline--fa fa-sign-out-alt fa-w-16" aria-hidden="true"
                                 focusable="false" data-prefex="fas" data-icon="sign-out-alt" role="img"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg></svg>

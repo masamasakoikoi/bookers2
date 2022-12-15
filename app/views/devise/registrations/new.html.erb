@@ -1,8 +1,72 @@
+<!DOCTYPE html>
+<html class="fontawesome-i2svg-active fontawesome-i2svg-complete">
+<head>
+  <style type="text/css"></style>
+  <title>Bookers2Ver2</title>
+  <meta name="csrf-param" content="authenticity_token">
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+</head>
+<body>
+  <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <span>Bookers</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ml-auto">
+                        <li>
+                            <a class="nav-link text-light" href="/">
+                                <svg class="svg-inline--fa fa-home fa-w-18" aria-hidden="true"
+                                focusable="false" data-prefex="fas" data-icon="home" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg></svg>
+                                Home
+                            </a>
+                        </li>
+                      
+                      
+                      
+                        <li>
+                            <a class="nav-link text-light" href="/home/about">
+                                <svg class="svg-inline--fa fa-home fa-w-16" aria-hidden="true"
+                                focusable="false" data-prefex="fas" data-icon="link" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg></svg>
+                                About
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a class="nav-link text-light" href="/users/sign_up">
+                                <svg class="svg-inline--fa fa-user-plus fa-w-20" aria-hidden="true"
+                                focusable="false" data-prefex="fas" data-icon="user-plus" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg></svg>
+                                Sign up
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link text-light"   href="/users/sign_in">
+                                <svg class="svg-inline--fa fa-sign-in-alt fa-w-16" aria-hidden="true"
+                                focusable="false" data-prefex="fas" data-icon="sign-in-alt" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg></svg>
+                                Log in
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
-
+  
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
