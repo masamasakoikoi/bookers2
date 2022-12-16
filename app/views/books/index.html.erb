@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html class="fontawesome-i2svg-active fontawesome-i2svg-complete">
-<head>
-    <link rel ="stylesheet"  href="/assets/stylesheets/homes.scss">
-    <title>Bookers2Ver2</title>
-    <%= link_to "トップページ",new_user_registration_path %>
-    <%= link_to "logout",destroy_user_session_path,method: :delete %>
-    <body>
+    <head>
+        <title>Bookers2Ver2</title>
+        <link rel ="stylesheet"  href="/assets/stylesheets/homes.scss">
+        <meta name="csrf-param" content="authenticity_token">
+        <meta name="csrf-token" content="Nz-KicdvfUFtmGB89eySe9-GFU4o9n1gC8VT9X9atuE1zI4mhw6Pbh3wQcU5oJW5wHqNYDr_U7EM0fYekQufOQ">
+        <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+    </head>
+<body>
       <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
@@ -61,54 +63,33 @@
     </header>
     <main>
         <p id="notice"></p>
-        <div class="container">
+        <div class="container px-5 px-sm-0">
             <div class="row">
-                <div class="mx-auto col-11 col-sm-10 col-lg-8 col-xl-6">
-                    <h1>
-                        welcome to
-                        <!--本のアイコン-->
-                        <!--<svg class="svg-inline--fa fa-book fa-w-14" aria-hidden="true"-->
-                        <!--focusable="false" data-prefix="fas" data-icon="book" role="img"-->
-                        <!--xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg>-->
-                        <!--: :before-->
-                        <!--<path fill="currentColor" d="M448 360V24c0-13.3-10.7-24-24-24H96C43 0 0 43 0 96v320c0 53 43 96 96 96h328c13.3 0 24-10.7 24-24v-16c0-7.5-3.5-14.3-8.9-18.7-4.2-15.4-4.2-59.3 0-74.7 5.4-4.3 8.9-11.1 8.9-18.6zM128 134c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm0 64c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm253.4 250H96c-17.7 0-32-14.3-32-32 0-17.6 14.4-32 32-32h285.4c-1.9 17.1-1.9 46.9 0 64z"></path>-->
-                        <!--</svg>-->
-                            <strong>Bookers</strong>
-                            !!
-                    </h1>
-                    <p>
-                        In
-                        <!--本のアイコン-->
-                        <!--<svg class="svg-inline--fa fa-book fa-w-14" aria-hidden="true"-->
-                        <!--focusable="false" data-prefix="fas" data-icon="book"-->
-                        <!--role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"-->
-                        <!--data-fa-i2svg></svg>-->
-                        <strong>Bookers,</strong>
-                      </p>
-                      <p>you can share and exchange your opinions,inpressions,and emotions</p>
-                      <p>about various books!</p>
-                      <div class="btn-wrapper col-10 mx-auto">
-                          <div class="row">
-                              <a class="btn btn-success btn-sm btn-block sign_up"
-                              href="/users/sign_in">Log in</a>
-                          </div>
-                          <div class="row">
-                              <a class="btn btn-success btn-sm btn-block sign_up"
-                              href="users/sign_up">Sign up</a>
-                          </div>
-                      </div>
+                <div class="col-md-3">
+                    <h2>User info</h2>
+                    <img src="">
+                    <table class="table">
+                        <tbody>
+                            <tr></tr>
+                            <tr>
+                                <th>name</th>
+                                <th>masahiro</th>
+                            </tr>
+                            <tr>
+                                <th>introduction</th>
+                                <th>masahirodesu</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                <div class="row">
+                </div>
                 </div>
             </div>
         </div>
+        
     </main>
-    <footer>
-        <div class="container mt-5">
-            <div class="row">
-                <div class="mx-auto">
-                    <p>CopyRight Infratop.inc</p>
-                </div>
-            </div>
-        </div>
-    </footer>
 </body>
+    
+    
+    
 </html>

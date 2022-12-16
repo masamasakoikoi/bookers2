@@ -4,3 +4,114 @@
 *, :after, :before {
     box-sizing: border-box;
 }
+
+body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,
+    Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,
+    sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+
+article,aside,figcaption,
+figure,footer,header,hgroup,main,nav,section{
+    display:block;
+}
+
+.bg-dark{
+    background-color:#343a30!important;
+}
+
+.navbar, .navbar .container, .navbar .container-fluid,
+.navbar .container-lg, .navbar .container-md, .navbar .container-sm,
+.navbar .container-xl{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.navbar{
+    position:relative;
+    padding:0.5rem 1rem;
+}
+
+p{
+    margin-top:0;
+    margin-bottom:1rem;
+}
+
+
+
+.container, .container-fluid, .container-lg,
+.container-md, .container-sm, .container-xl{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.navbar-dark .navbar-brand, .navbar-dark. navbar-brand:focus,
+.navbar-dark .navbar-brand:hover{
+    color:#fff;
+}
+
+.navbar-brand{
+    display: inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3123rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+a{
+    text-decoration:none;
+    background-color:transparent;
+}
+
+.navbar-dark .navbar-toggler{
+    color:hsla(0.0%,100%,.5);
+    border-color:hsla(0,0%,100%,.1);
+}
+
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+.btn-block{
+    display: block;
+    width: 100%;
+}
+
+.btn-outline-secondary{
+    color: #6c757d;
+    border-color:#6c757d;
+}
+
+
+
+
+
+
+@media(min-width: 576px)
+.container,container-sm{
+    max-width:540px;
+}
+
+@media (max-width: 991.98px)
+.navbar-expand-lg>.container,.navbar-expand-lg>.container-fluid,
+.navbar-expand-lg>.container-lg, .navbar-expand-lg>.container-md,
+.navbar-expand-lg>.container-sm, .navbar-expand-lg>.container-xl {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+
