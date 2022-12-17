@@ -1,65 +1,4 @@
-<!DOCTYPE html>
-<html class="fontawesome-i2svg-active fontawesome-i2svg-complete">
-<head>
-    <link rel ="stylesheet"  href="/assets/stylesheets/homes.scss">
-    <title>Bookers2Ver2</title>
-    <%= link_to "トップページ",new_user_registration_path %>
-    <%= link_to "logout",destroy_user_session_path,method: :delete %>
-    <body>
-      <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="/">
-                    <span>Bookers</span>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav ml-auto">
-                        <li>
-                            <a class="nav-link text-light" href="/users/123">
-                                <svg class="svg-inline--fa fa-home fa-w-18" aria-hidden="true"
-                                focusable="false" data-prefex="fas" data-icon="home" role="img"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg></svg>
-                                Home
-                            </a>
-                        </li>
-                        
-                        <li>
-                            <a class="nav-link text-light" href="/users">
-                                <svg class="svg-inline--fa fa-users fa-w-20" aria-hidden="true"
-                                focusable="false" data-prefex="fas" data-icon="users" role="img"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg></svg>
-                                Users
-                            </a>
-                        </li>
-                        
-                        <li>
-                            <a class="nav-link text-light" href="/books">
-                                <svg class="svg-inline--fa fa-book-open fa-w-18" aria-hidden="true"
-                                focusable="false" data-prefex="fas" data-icon="book-open" role="img"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg></svg>
-                                Books
-                            </a>
-                        </li>
-                        
-                        <li>
-                            <a class="nav-link text-light"  rel="nofollow" data-method="delete" href="/users/sign_out">
-                                <svg class="svg-inline--fa fa-sign-out-alt fa-w-16" aria-hidden="true"
-                                focusable="false" data-prefex="fas" data-icon="sign-out-alt" role="img"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg></svg>
-                                Log out
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <main>
+<main>
         <p id="notice"></p>
         <div class="container">
             <div class="row">
@@ -101,14 +40,4 @@
             </div>
         </div>
     </main>
-    <footer>
-        <div class="container mt-5">
-            <div class="row">
-                <div class="mx-auto">
-                    <p>CopyRight Infratop.inc</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-</body>
 </html>
