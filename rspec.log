@@ -1,0 +1,29 @@
+
+An error occurred while loading ./spec.
+[31mFailure/Error: __send__(method, file)[0m
+[31m[0m
+[31mLoadError:[0m
+[31m  cannot load such file -- /home/ec2-user/environment/bookers2/spec[0m
+[36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rspec-core-3.12.0/lib/rspec/core/configuration.rb:2117:in `load'[0m
+[36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rspec-core-3.12.0/lib/rspec/core/configuration.rb:2117:in `load_file_handling_errors'[0m
+[36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rspec-core-3.12.0/lib/rspec/core/configuration.rb:1617:in `block in load_spec_files'[0m
+[36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rspec-core-3.12.0/lib/rspec/core/configuration.rb:1615:in `each'[0m
+[36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rspec-core-3.12.0/lib/rspec/core/configuration.rb:1615:in `load_spec_files'[0m
+[36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rspec-core-3.12.0/lib/rspec/core/runner.rb:102:in `setup'[0m
+[36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rspec-core-3.12.0/lib/rspec/core/runner.rb:86:in `run'[0m
+[36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rspec-core-3.12.0/lib/rspec/core/runner.rb:71:in `run'[0m
+[36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rspec-core-3.12.0/lib/rspec/core/runner.rb:45:in `invoke'[0m
+[36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rspec-core-3.12.0/exe/rspec:4:in `<top (required)>'[0m
+[36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/bin/rspec:25:in `load'[0m
+[36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/bin/rspec:25:in `<main>'[0m
+[36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/bin/ruby_executable_hooks:22:in `eval'[0m
+[36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/bin/ruby_executable_hooks:22:in `<main>'[0m
+[36m# [0m
+[36m#   Showing full backtrace because every line was filtered out.[0m
+[36m#   See docs for RSpec::Configuration#backtrace_exclusion_patterns and[0m
+[36m#   RSpec::Configuration#backtrace_inclusion_patterns for more information.[0m
+No examples found.
+
+Finished in 0.00004 seconds (files took 0.23092 seconds to load)
+[31m0 examples, 0 failures, 1 error occurred outside of examples[0m
+
