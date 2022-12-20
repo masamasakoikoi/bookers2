@@ -1,0 +1,13 @@
+<h2>User info</h2>
+
+<%= form_with model: @user,url:'/users' do |f| %>
+<label for="user_name">Name</label>
+<%= f.text_field :title %>
+
+<h3>Images</h3>
+<%= f.file_field :image,accept "image/*" %>
+
+<h3>Introduction</h3>
+<%= f.text_area:body %>
+
+<% end %>
