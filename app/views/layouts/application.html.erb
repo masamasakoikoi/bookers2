@@ -25,30 +25,32 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ml-auto">
                         <li>
-                            <a class="nav-link text-light" href="/users/:id">
+                            <%= link_to user_path(current_user.id),class:"nav-link text-light" do %>
                             <i class="fas fa-home"></i>
                                 Home
-                            </a>
+                            <% end %>
                         </li>
                         
                         <li>
                               <%= link_to users_path,class:"nav-link text-light" do %>
+                              <i class="fas fa-users"></i>
                                 Users
                               <% end %>
                         </li>
                         
                         <li>
-                            <a class="nav-link text-light" href="/books">
-                                
+                            
+                              <%= link_to books_path,class:"nav-link text-light" do %>
+                              <i class="fas fa-book-open"></i>
                                 Books
-                            </a>
+                            <% end %>
                         </li>
                         
                         <li>
-                            <a class="nav-link text-light"  rel="nofollow" data-method="delete" href="/users/sign_out">
-                                
+                            
+                                <%= link_to destroy_user_session_path,class:"nav-link text-light" do %>
                                 Log out
-                            </a>
+                            <% end %>
                         </li>
                     </ul>
                 </div>
