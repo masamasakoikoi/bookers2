@@ -25,17 +25,16 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ml-auto">
                         <li>
-                            <a class="nav-link text-light" href="/users/123">
+                            <a class="nav-link text-light" href="/users/:id">
                             <i class="fas fa-home"></i>
                                 Home
                             </a>
                         </li>
                         
                         <li>
-                            <a class="nav-link text-light" href="/users">
-                              
+                              <%= link_to users_path,class:"nav-link text-light" do %>
                                 Users
-                            </a>
+                              <% end %>
                         </li>
                         
                         <li>

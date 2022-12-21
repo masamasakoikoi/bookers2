@@ -630,13 +630,53 @@ Failures:
       [36m# ./spec/system/01_before_login_spec.rb:86:in `block (4 levels) in <main>'[0m
 
   19) [STEP1] ユーザログイン前のテスト ヘッダーのテスト: ログインしていない場合 リンクの内容を確認 Aboutを押すと、アバウト画面に遷移する
-      [31mFailure/Error: is_expected.to eq '/home/about'[0m
+      [31mFailure/Error: @user = User.find(params[:id])[0m
       [31m[0m
-      [31m  expected: "/home/about"[0m
-      [31m       got: "/users"[0m
-      [31m[0m
-      [31m  (compared using ==)[0m
-      [36m# ./spec/system/01_before_login_spec.rb:93:in `block (4 levels) in <main>'[0m
+      [31mActiveRecord::RecordNotFound:[0m
+      [31m  Couldn't find User with 'id'=:id[0m
+      [36m# ./app/controllers/users_controller.rb:7:in `edit'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/actiontext-6.1.7/lib/action_text/rendering.rb:20:in `with_renderer'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/actiontext-6.1.7/lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/warden-1.2.9/lib/warden/manager.rb:36:in `block in call'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/warden-1.2.9/lib/warden/manager.rb:34:in `catch'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/warden-1.2.9/lib/warden/manager.rb:34:in `call'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rack-2.2.4/lib/rack/tempfile_reaper.rb:15:in `call'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rack-2.2.4/lib/rack/etag.rb:27:in `call'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rack-2.2.4/lib/rack/conditional_get.rb:27:in `call'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rack-2.2.4/lib/rack/head.rb:12:in `call'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rack-2.2.4/lib/rack/session/abstract/id.rb:266:in `context'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rack-2.2.4/lib/rack/session/abstract/id.rb:260:in `call'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/rack/logger.rb:37:in `call_app'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/rack/logger.rb:26:in `block in call'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/rack/logger.rb:26:in `call'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rack-2.2.4/lib/rack/method_override.rb:24:in `call'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rack-2.2.4/lib/rack/runtime.rb:22:in `call'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rack-2.2.4/lib/rack/sendfile.rb:110:in `call'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/railties-6.1.7/lib/rails/engine.rb:539:in `call'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rack-2.2.4/lib/rack/urlmap.rb:74:in `block in call'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rack-2.2.4/lib/rack/urlmap.rb:58:in `each'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rack-2.2.4/lib/rack/urlmap.rb:58:in `call'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rack-2.2.4/lib/rack/builder.rb:244:in `call'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rack-test-2.0.2/lib/rack/test.rb:358:in `process_request'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rack-test-2.0.2/lib/rack/test.rb:165:in `custom_request'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/rack-test-2.0.2/lib/rack/test.rb:114:in `get'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/capybara-3.38.0/lib/capybara/rack_test/browser.rb:80:in `process'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/capybara-3.38.0/lib/capybara/rack_test/browser.rb:55:in `process_and_follow_redirects'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/capybara-3.38.0/lib/capybara/rack_test/browser.rb:50:in `follow'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/capybara-3.38.0/lib/capybara/rack_test/node.rb:249:in `follow_link'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/capybara-3.38.0/lib/capybara/rack_test/node.rb:72:in `click'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/capybara-3.38.0/lib/capybara/rack_test/node.rb:138:in `call'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/capybara-3.38.0/lib/capybara/rack_test/node.rb:138:in `click'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/capybara-3.38.0/lib/capybara/node/element.rb:172:in `block in click'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/capybara-3.38.0/lib/capybara/node/element.rb:608:in `block in perform_click_action'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/capybara-3.38.0/lib/capybara/node/base.rb:84:in `synchronize'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/capybara-3.38.0/lib/capybara/node/element.rb:608:in `perform_click_action'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/capybara-3.38.0/lib/capybara/node/element.rb:171:in `click'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/capybara-3.38.0/lib/capybara/node/actions.rb:42:in `click_link'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/capybara-3.38.0/lib/capybara/session.rb:773:in `click_link'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/capybara-3.38.0/lib/capybara/dsl.rb:52:in `call'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/capybara-3.38.0/lib/capybara/dsl.rb:52:in `click_link'[0m
+      [36m# ./spec/system/01_before_login_spec.rb:92:in `block (4 levels) in <main>'[0m
 
   20) [STEP1] ユーザログイン前のテスト ヘッダーのテスト: ログインしていない場合 リンクの内容を確認 Sign upを押すと、新規登録画面に遷移する
       [31mFailure/Error: is_expected.to eq '/users/sign_up'[0m
@@ -661,8 +701,8 @@ Failures:
       [31m[0m
       [31mActionView::Template::Error:[0m
       [31m  undefined method `name' for #<User id: nil, email: "", created_at: nil, updated_at: nil>[0m
-      [36m# ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb__1990696667398201864_22940'[0m
-      [36m# ./app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb__1990696667398201864_22940'[0m
+      [36m# ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb___1402681257493746416_22980'[0m
+      [36m# ./app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb___1402681257493746416_22980'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/responders-3.0.1/lib/action_controller/responder.rb:240:in `default_render'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/responders-3.0.1/lib/action_controller/responder.rb:172:in `to_html'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/responders-3.0.1/lib/action_controller/responder.rb:165:in `respond'[0m
@@ -706,15 +746,15 @@ Failures:
       [36m# --- Caused by: ---[0m
       [36m# NoMethodError:[0m
       [36m#   undefined method `name' for #<User id: nil, email: "", created_at: nil, updated_at: nil>[0m
-      [36m#   ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb__1990696667398201864_22940'[0m
+      [36m#   ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb___1402681257493746416_22980'[0m
 
   23) [STEP1] ユーザログイン前のテスト ユーザ新規登録のテスト 表示内容の確認 「Sign up」と表示される
       [31mFailure/Error: <%= f.text_field :name %>[0m
       [31m[0m
       [31mActionView::Template::Error:[0m
       [31m  undefined method `name' for #<User id: nil, email: "", created_at: nil, updated_at: nil>[0m
-      [36m# ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb__1990696667398201864_22940'[0m
-      [36m# ./app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb__1990696667398201864_22940'[0m
+      [36m# ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb___1402681257493746416_22980'[0m
+      [36m# ./app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb___1402681257493746416_22980'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/responders-3.0.1/lib/action_controller/responder.rb:240:in `default_render'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/responders-3.0.1/lib/action_controller/responder.rb:172:in `to_html'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/responders-3.0.1/lib/action_controller/responder.rb:165:in `respond'[0m
@@ -758,15 +798,15 @@ Failures:
       [36m# --- Caused by: ---[0m
       [36m# NoMethodError:[0m
       [36m#   undefined method `name' for #<User id: nil, email: "", created_at: nil, updated_at: nil>[0m
-      [36m#   ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb__1990696667398201864_22940'[0m
+      [36m#   ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb___1402681257493746416_22980'[0m
 
   24) [STEP1] ユーザログイン前のテスト ユーザ新規登録のテスト 表示内容の確認 nameフォームが表示される
       [31mFailure/Error: <%= f.text_field :name %>[0m
       [31m[0m
       [31mActionView::Template::Error:[0m
       [31m  undefined method `name' for #<User id: nil, email: "", created_at: nil, updated_at: nil>[0m
-      [36m# ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb__1990696667398201864_22940'[0m
-      [36m# ./app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb__1990696667398201864_22940'[0m
+      [36m# ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb___1402681257493746416_22980'[0m
+      [36m# ./app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb___1402681257493746416_22980'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/responders-3.0.1/lib/action_controller/responder.rb:240:in `default_render'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/responders-3.0.1/lib/action_controller/responder.rb:172:in `to_html'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/responders-3.0.1/lib/action_controller/responder.rb:165:in `respond'[0m
@@ -810,15 +850,15 @@ Failures:
       [36m# --- Caused by: ---[0m
       [36m# NoMethodError:[0m
       [36m#   undefined method `name' for #<User id: nil, email: "", created_at: nil, updated_at: nil>[0m
-      [36m#   ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb__1990696667398201864_22940'[0m
+      [36m#   ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb___1402681257493746416_22980'[0m
 
   25) [STEP1] ユーザログイン前のテスト ユーザ新規登録のテスト 表示内容の確認 emailフォームが表示される
       [31mFailure/Error: <%= f.text_field :name %>[0m
       [31m[0m
       [31mActionView::Template::Error:[0m
       [31m  undefined method `name' for #<User id: nil, email: "", created_at: nil, updated_at: nil>[0m
-      [36m# ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb__1990696667398201864_22940'[0m
-      [36m# ./app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb__1990696667398201864_22940'[0m
+      [36m# ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb___1402681257493746416_22980'[0m
+      [36m# ./app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb___1402681257493746416_22980'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/responders-3.0.1/lib/action_controller/responder.rb:240:in `default_render'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/responders-3.0.1/lib/action_controller/responder.rb:172:in `to_html'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/responders-3.0.1/lib/action_controller/responder.rb:165:in `respond'[0m
@@ -862,15 +902,15 @@ Failures:
       [36m# --- Caused by: ---[0m
       [36m# NoMethodError:[0m
       [36m#   undefined method `name' for #<User id: nil, email: "", created_at: nil, updated_at: nil>[0m
-      [36m#   ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb__1990696667398201864_22940'[0m
+      [36m#   ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb___1402681257493746416_22980'[0m
 
   26) [STEP1] ユーザログイン前のテスト ユーザ新規登録のテスト 表示内容の確認 passwordフォームが表示される
       [31mFailure/Error: <%= f.text_field :name %>[0m
       [31m[0m
       [31mActionView::Template::Error:[0m
       [31m  undefined method `name' for #<User id: nil, email: "", created_at: nil, updated_at: nil>[0m
-      [36m# ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb__1990696667398201864_22940'[0m
-      [36m# ./app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb__1990696667398201864_22940'[0m
+      [36m# ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb___1402681257493746416_22980'[0m
+      [36m# ./app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb___1402681257493746416_22980'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/responders-3.0.1/lib/action_controller/responder.rb:240:in `default_render'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/responders-3.0.1/lib/action_controller/responder.rb:172:in `to_html'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/responders-3.0.1/lib/action_controller/responder.rb:165:in `respond'[0m
@@ -914,15 +954,15 @@ Failures:
       [36m# --- Caused by: ---[0m
       [36m# NoMethodError:[0m
       [36m#   undefined method `name' for #<User id: nil, email: "", created_at: nil, updated_at: nil>[0m
-      [36m#   ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb__1990696667398201864_22940'[0m
+      [36m#   ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb___1402681257493746416_22980'[0m
 
   27) [STEP1] ユーザログイン前のテスト ユーザ新規登録のテスト 表示内容の確認 password_confirmationフォームが表示される
       [31mFailure/Error: <%= f.text_field :name %>[0m
       [31m[0m
       [31mActionView::Template::Error:[0m
       [31m  undefined method `name' for #<User id: nil, email: "", created_at: nil, updated_at: nil>[0m
-      [36m# ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb__1990696667398201864_22940'[0m
-      [36m# ./app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb__1990696667398201864_22940'[0m
+      [36m# ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb___1402681257493746416_22980'[0m
+      [36m# ./app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb___1402681257493746416_22980'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/responders-3.0.1/lib/action_controller/responder.rb:240:in `default_render'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/responders-3.0.1/lib/action_controller/responder.rb:172:in `to_html'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/responders-3.0.1/lib/action_controller/responder.rb:165:in `respond'[0m
@@ -966,15 +1006,15 @@ Failures:
       [36m# --- Caused by: ---[0m
       [36m# NoMethodError:[0m
       [36m#   undefined method `name' for #<User id: nil, email: "", created_at: nil, updated_at: nil>[0m
-      [36m#   ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb__1990696667398201864_22940'[0m
+      [36m#   ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb___1402681257493746416_22980'[0m
 
   28) [STEP1] ユーザログイン前のテスト ユーザ新規登録のテスト 表示内容の確認 Sign upボタンが表示される
       [31mFailure/Error: <%= f.text_field :name %>[0m
       [31m[0m
       [31mActionView::Template::Error:[0m
       [31m  undefined method `name' for #<User id: nil, email: "", created_at: nil, updated_at: nil>[0m
-      [36m# ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb__1990696667398201864_22940'[0m
-      [36m# ./app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb__1990696667398201864_22940'[0m
+      [36m# ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb___1402681257493746416_22980'[0m
+      [36m# ./app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb___1402681257493746416_22980'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/responders-3.0.1/lib/action_controller/responder.rb:240:in `default_render'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/responders-3.0.1/lib/action_controller/responder.rb:172:in `to_html'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/responders-3.0.1/lib/action_controller/responder.rb:165:in `respond'[0m
@@ -1018,15 +1058,15 @@ Failures:
       [36m# --- Caused by: ---[0m
       [36m# NoMethodError:[0m
       [36m#   undefined method `name' for #<User id: nil, email: "", created_at: nil, updated_at: nil>[0m
-      [36m#   ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb__1990696667398201864_22940'[0m
+      [36m#   ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb___1402681257493746416_22980'[0m
 
   29) [STEP1] ユーザログイン前のテスト ユーザ新規登録のテスト 新規登録成功のテスト 正しく新規登録される
       [31mFailure/Error: <%= f.text_field :name %>[0m
       [31m[0m
       [31mActionView::Template::Error:[0m
       [31m  undefined method `name' for #<User id: nil, email: "", created_at: nil, updated_at: nil>[0m
-      [36m# ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb__1990696667398201864_22940'[0m
-      [36m# ./app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb__1990696667398201864_22940'[0m
+      [36m# ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb___1402681257493746416_22980'[0m
+      [36m# ./app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb___1402681257493746416_22980'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/responders-3.0.1/lib/action_controller/responder.rb:240:in `default_render'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/responders-3.0.1/lib/action_controller/responder.rb:172:in `to_html'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/responders-3.0.1/lib/action_controller/responder.rb:165:in `respond'[0m
@@ -1070,15 +1110,15 @@ Failures:
       [36m# --- Caused by: ---[0m
       [36m# NoMethodError:[0m
       [36m#   undefined method `name' for #<User id: nil, email: "", created_at: nil, updated_at: nil>[0m
-      [36m#   ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb__1990696667398201864_22940'[0m
+      [36m#   ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb___1402681257493746416_22980'[0m
 
   30) [STEP1] ユーザログイン前のテスト ユーザ新規登録のテスト 新規登録成功のテスト 新規登録後のリダイレクト先が、新規登録できたユーザの詳細画面になっている
       [31mFailure/Error: <%= f.text_field :name %>[0m
       [31m[0m
       [31mActionView::Template::Error:[0m
       [31m  undefined method `name' for #<User id: nil, email: "", created_at: nil, updated_at: nil>[0m
-      [36m# ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb__1990696667398201864_22940'[0m
-      [36m# ./app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb__1990696667398201864_22940'[0m
+      [36m# ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb___1402681257493746416_22980'[0m
+      [36m# ./app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb___1402681257493746416_22980'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/responders-3.0.1/lib/action_controller/responder.rb:240:in `default_render'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/responders-3.0.1/lib/action_controller/responder.rb:172:in `to_html'[0m
       [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/responders-3.0.1/lib/action_controller/responder.rb:165:in `respond'[0m
@@ -1122,7 +1162,7 @@ Failures:
       [36m# --- Caused by: ---[0m
       [36m# NoMethodError:[0m
       [36m#   undefined method `name' for #<User id: nil, email: "", created_at: nil, updated_at: nil>[0m
-      [36m#   ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb__1990696667398201864_22940'[0m
+      [36m#   ./app/views/devise/registrations/new.html.erb:9:in `block in _app_views_devise_registrations_new_html_erb___1402681257493746416_22980'[0m
 
   31) [STEP1] ユーザログイン前のテスト ユーザログイン 表示内容の確認 「Log in」と表示される
       [31mFailure/Error: expect(page).to have_content 'Log in'[0m
@@ -3932,7 +3972,7 @@ Failures:
        [36m# /home/ec2-user/.rvm/gems/ruby-3.1.2/gems/factory_bot-6.2.1/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
        [36m# ./spec/system/03_finishing_touches_spec.rb:5:in `block (2 levels) in <main>'[0m
 
-Finished in 1.34 seconds (files took 2.31 seconds to load)
+Finished in 2.02 seconds (files took 2.07 seconds to load)
 [31m199 examples, 187 failures[0m
 
 Failed examples:
