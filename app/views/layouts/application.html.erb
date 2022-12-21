@@ -51,20 +51,21 @@
                 <li>
                     
                         <%= link_to destroy_user_session_path,class:"nav-link text-light",method: :delete do %>
+                        <i class="fas fa-sign-out-alt"></i>
                         Log out
                     <% end %>
                 </li>
         <% else %>
                   <li>
-                    <%= link_to user_path(current_user.id),class:"nav-link text-light" do %>
+                    <%= link_to root_path,class:"nav-link text-light" do %>
                     <i class="fas fa-home"></i>
                         Home
                     <% end %>
                 </li>
                 
                 <li>
-                      <%= link_to about_path,class:"nav-link text-light" do %>
-                      <i class="fas fa-users"></i>
+                      <%= link_to home_about_path,class:"nav-link text-light" do %>
+                      <i class="fas fa-link"></i>
                         About
                       <% end %>
                 </li>
@@ -72,14 +73,15 @@
                 <li>
                     
                       <%= link_to new_user_registration_path,class:"nav-link text-light" do %>
-                      <i class="fas fa-book-open"></i>
+                      <i class="fas fa-user-plus"></i>
                         Sign up
                     <% end %>
                 </li>
                 
                 <li>
                     
-                    <%= link_to user_session_path,class:"nav-link text-light", do %>
+                    <%= link_to user_session_path,class:"nav-link text-light" do %>
+                    <i class="fas fa-sign-in-alt"></i>
                         Log in
                     <% end %>
                 </li>

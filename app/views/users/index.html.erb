@@ -26,18 +26,20 @@
                     <input type="hidden" name="authenticity_token"
                     value="A3kOo-mxypZ-ujUXpnnoDCZzxR7Co8rgmp1BEGBFJ38BigoMqdA4uQ7SFK5qNe_OOY9dMNCq5DGdieT7jhQOpw" autocomplete="off">
                 <div class="form-group">
+                <%= form_with model: @book do |f| %>
                     <label for="book_title">Title</label>
-                    <input class="form-control book_title" type="text" name="book[title]" id="book_title">
+                    <%= f.text_field :title %>
                 </div>
                 
                 <div class="form-group">
                     <label for="book_opinion">Opinion</label>
-                    <textarea class="form-control book_body" name="book[body]" id="body"></textarea>
+                    <%= f.text_area :body %>
                 </div>
                 
                 <div class="form-group">
-                    <input type="submit" name="commit" value="Create Book" class="btn btn-success" data-disable-with="Create Book">
+                    <%= f.submit 'Create Book' %>
                 </div>
+                <% end %>
             </form>
          </div>
          <div class="col-md-8 offset-md-1">
