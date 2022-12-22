@@ -29,14 +29,14 @@
                     <input type="hidden" name="authenticity_token"
                     value="A3kOo-mxypZ-ujUXpnnoDCZzxR7Co8rgmp1BEGBFJ38BigoMqdA4uQ7SFK5qNe_OOY9dMNCq5DGdieT7jhQOpw" autocomplete="off">
                 <div class="form-group">
-                <%= form_with model: @book do |f| %>
+                <%= form_with model:@book do |f| %>
                     <label for="book_title">Title</label>
                     <%= f.text_field :title,class:"form-control book_title" %>
                 </div>
                 
                 <div class="form-group">
-                    <label for="book_opinion">Opinion</label>
-                    <%= f.text_area :opinion,class:"form-control book_body" %>
+                    <label for="book_body">Opinion</label>
+                    <%= f.text_area :body,class:"form-control book_body" %>
                 </div>
                 
                 <div class="form-group">
@@ -59,9 +59,9 @@
                   <% @books.each do |book| %>
                      <tbody>
                          <tr>
-                             <td><%= image_tag user.get_profile_image(100,100) %></td>
+                             <td><%= image_tag @user.get_profile_image(100,100) %></td>
                              <td><%= book.title %></td>
-                             <td><%= book.opinion %></td>
+                             <td><%= book.body %></td>
                 <% end %>
                      </tr>
                  </tbody>
