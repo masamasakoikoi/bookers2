@@ -20,9 +20,9 @@
                             </tr>
                         </tbody>
                     </table>
-                    <a class = "btn btn-outline-secondary btn-block edit_user_path" href="/users/:id/edit">
-                        <i class="fas fa-user-cog"></i>
-                     </a>
+                    <%= link_to edit_user_path(current_user.id),class:"btn btn-outline-secondary btn-block edit_user_path" do %>
+                         <i class="fas fa-user-cog"></i> 
+                         <% end %>
                 <h2 class="mt-3">New book</h2>
             <form action="/books" accept-charset="UTF-8"
                 method="post">

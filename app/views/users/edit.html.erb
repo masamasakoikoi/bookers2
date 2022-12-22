@@ -3,9 +3,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
-            <%= form_with model: @user,url:'/users' do |f| %>
-                        <form enctype="multipart /formdata" accept-charset="UTF-8" method="post">
-                            <input type="hidden" name="_method" value="patch" autocomplete="off">
+            <%= form_with model: @user, local:true do |f| %>
                             <div class="form-group">
                             
                             <label for="user_name">Name</label>
@@ -19,12 +17,10 @@
                                 <%= f.text_area:body %>
                             <div class="form-group">
                                 <input type="submit" name="commit" value="Update User" class="btn btn-secondary" data-disable-with="Update User">
-                                
                             </div>
                                 
                                 <% end %>
                             </div>
-                            </form>
                 </div>
         </div>
     </div>
