@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <h2>User info</h2>
-                    <img src="">
+                    <%= image_tag current_user.get_profile_image(100,100) %>
                     <table class="table">
                         <tbody>
                             <tr></tr>
@@ -36,31 +36,40 @@
                 <div class="form-group">
                 <%= form_with model: @book do |f| %>
                     <label for="book_title">Title</label>
-                    <%= f.text_field :title %>
+                    <%= f.text_field :title,class:"form-control book_title" %>
                 </div>
                 
                 <div class="form-group">
                     <label for="book_opinion">Opinion</label>
-                    <%= f.text_area :body %>
+                    <%= f.text_area :body,class:"form-control book_body" %>
                 </div>
                 
                 <div class="form-group">
-                    <%= f.submit 'Create Book' %>
+                    <%= f.submit 'Create Book',class:"btn btn-success" %>
                 </div>
                 <% end %>
             </form>
          </div>
          <div class="col-md-8 offset-md-1">
-             <h2>Books</h2>
+             <h2>Users</h2>
              <table class="table table-hover table-inverse">
                  <thead>
                      <tr>
-                         <th></th>
-                         <th>Title</th>
-                         <th>Opinion</th>
+                         <th>image</th>
+                         <th>name</th>
                          <th colspan="3"></th>
                      </tr>
                  </thead>
+                  <% @users.each do |user| %>
+                 <tbody>
+                     <tr>
+                             <td><%= image_tag user.get_profile_image(100,100) %></td>
+                             <td><%= user.name %></td>
+                             <td><%= link_to users_path do %>show</td>
+                                <% end %>
+                         <% end %>
+                     </tr>
+                 </tbody>
              </table>
          </div>
         </div>

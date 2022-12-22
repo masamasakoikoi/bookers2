@@ -7,21 +7,21 @@
                             <div class="form-group">
                             
                             <label for="user_name">Name</label>
-                            <%= f.text_field :title %>
+                            <%= f.text_field :name,class:"form-control name" %>
                             <div class="form-group">
                                 <label for="user_image">Image</label>
-                            <%= f.file_field :image,accept: "image/*" %>
+                            <%= f.file_field :image,class:"form-control-file user_image",accept: "image/*" %>
                             </div>
                             <div class="form-group">
                                 <label for="user_introduction">Introduction</label>
-                                <%= f.text_area:body %>
+                                <%= f.text_area:introduction,class:"form-control introduction" %>
                             <div class="form-group">
-                                <input type="submit" name="commit" value="Update User" class="btn btn-secondary" data-disable-with="Update User">
+                                <%= f.submit "Update User",class:"btn btn-secondary" %>
                             </div>
                                 
-                                <% end %>
                             </div>
                 </div>
         </div>
     </div>
+    <% end %>
 </div>
