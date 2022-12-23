@@ -1,6 +1,7 @@
-<body>
-
-    <main>
+<main>
+    <div>
+      <%= flash[:notice] %>
+    </div>
         <p id="notice"></p>
         <div class="container px-5 px-sm-0">
             <div class="row">
@@ -52,14 +53,21 @@
                      <tr>
                          <th></th>
                          <th>Title</th>
-                         <th>Opinion</th>
+                         <th>opinion</th>
                          <th colspan="3"></th>
                      </tr>
                  </thead>
+                  <% @users.each do |user| %>
+                     <tbody>
+                         <tr>
+                             <td><%= image_tag @user.get_profile_image(100,100) %></td>
+                             <td><%= link_to @user_path do %><%= book.title %><% end %></td>
+                             <td><%= book.body %></td>
+                <% end %>
+                     </tr>
+                 </tbody>
              </table>
          </div>
         </div>
     </div>
     </main>
-</body>
-</html>
