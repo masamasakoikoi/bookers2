@@ -14,7 +14,7 @@ class BooksController < ApplicationController
         @book = Book.new(book_params)
         @book.user_id = current_user.id
         @book.save
-        
+        flash[:notice] = "You have created book successfully."
         redirect_to '/books'
     end
     

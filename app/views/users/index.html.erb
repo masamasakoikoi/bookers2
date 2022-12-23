@@ -65,7 +65,7 @@
                      <tr>
                              <td><%= image_tag user.get_profile_image(100,100) %></td>
                              <td><%= user.name %></td>
-                             <td><%= link_to @user_path do %>show</td>
+                             <td><%= link_to user_path(user) do %>show</td>
                                 <% end %>
                          <% end %>
                      </tr>
