@@ -1,6 +1,7 @@
 <body>
 
     <main>
+        <%= flash[:notice] %>
         <p id="notice"></p>
         <div class="container px-5 px-sm-0">
             <div class="row">
@@ -53,13 +54,15 @@
              <h2>Book detail</h2>
              <table class="table table-hover table-inverse">
                  
-                  <% @book.each do |book| %>
                      <tbody>
                          <tr>
-                             <td><%= image_tag @user.get_profile_image(100,100) %></td>
-                             <td><%= link_to @book_path do %><%= book.title %><% end %></td>
-                             <td><%= book.body %></td>
-                <% end %>
+                             <td><%= link_to @user_path do %><%= image_tag @user.get_profile_image(100,100) %><% end %></td>
+                             <td><%= link_to @book_path do %><%= @book.title %><% end %></td>
+                             <td><%= @book.body %></td>
+                             <td><%= link_to @edit_book_path,class:"btn btn-sm btn-success edit_book_52720" do %>Edit<% end %></td>
+                             <td><%= link_to @books_path do %>
+                             <a data-confirm="本当に消しますか？" class="btn btn-sm btn-danger destroy_book_52720" rel="nofollow" data-method="delete">
+                             destroy<% end %></td></a>
                      </tr>
                  </tbody>
              </table>

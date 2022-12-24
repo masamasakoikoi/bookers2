@@ -1,5 +1,15 @@
 class UsersController < ApplicationController
     
+    def new
+        @user = User.new
+    end
+    
+    def create
+        user = User.new(user_params)
+        user.save
+        flash[:notice] = "Welcome! You have signed up successfully."
+        redirect_to user_path(user.id)
+    end
     
     def index
        @users = User.all
@@ -21,6 +31,7 @@ class UsersController < ApplicationController
         flash[:notice] = "You have updated user successfully."
         redirect_to user_path(user.id)
     end
+    
     
     private
     
