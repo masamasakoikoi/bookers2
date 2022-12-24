@@ -55,10 +55,12 @@
                              <td><%= link_to @user_path do %><%= image_tag @user.get_profile_image(100,100) %><% end %></td>
                              <td><%= link_to @book_path do %><%= @book.title %><% end %></td>
                              <td><%= @book.body %></td>
-                             <td><%= link_to edit_book_path,class:"btn btn-sm btn-success edit_book_52720" do %>Edit<% end %></td>
-                             <td><%= link_to @books_path do %>
-                             <a data-confirm="本当に消しますか？" class="btn btn-sm btn-danger destroy_book_52720" rel="nofollow" data-method="delete">
-                             destroy<% end %></td></a>
+                             <% if @book.user == current_user %>
+                                 <td><%= link_to edit_book_path,class:"btn btn-sm btn-success edit_book_52720" do %>Edit<% end %></td>
+                                 <td><%= link_to @books_path do %>
+                                 <a data-confirm="本当に消しますか？" class="btn btn-sm btn-danger destroy_book_52720" rel="nofollow" data-method="delete">
+                                 destroy<% end %></td></a>
+                             <% end %>
                      </tr>
                  </tbody>
              </table>

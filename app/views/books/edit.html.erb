@@ -8,12 +8,12 @@
                     <h2>Editing Book</h2>
                     <% if @book.errors.any? %>
                         <h3><%= @book.errors.count %>error prohibited this obj from being saved:</h3>
-                        <ul>
+                    <ul>
                         <% @book.errors.full_messages.each do |message| %>
                         <li><%= message %></li>
+                            <% end %>
+                    </ul>
                     <% end %>
-        </ul>
-        <% end %>
                 <div class="form-group">
                 <%= form_with model: @book do |f| %>
                     <label for="book_title">Title</label>
