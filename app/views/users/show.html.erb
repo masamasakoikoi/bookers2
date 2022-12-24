@@ -57,13 +57,13 @@
                          <th colspan="3"></th>
                      </tr>
                  </thead>
-                <!--  <%# @users.each do |user| %>-->
-                <!--     <tbody>-->
-                <!--         <tr>-->
-                <!--             <td><%#= image_tag @user.get_profile_image(100,100) %></td>-->
-                <!--             <td><%#= link_to @user_path do %><%#= book.title %><%# end %></td>-->
-                <!--             <td><%#= book.body %></td>-->
-                <!--<%# end %>-->
+                  <% @books.each do |book| %>
+                     <tbody>
+                         <tr>
+                             <td><%= image_tag @user.get_profile_image(100,100) %></td>
+                             <td><%= link_to @user_path do %><%= book.title %><% end %></td>
+                             <td><%= book.body %></td>
+                    <% end %>
                      </tr>
                  </tbody>
              </table>
