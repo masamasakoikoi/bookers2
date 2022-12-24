@@ -30,10 +30,6 @@
                     
                     
                 <h2 class="mt-3">New book</h2>
-            <form action="/books" accept-charset="UTF-8"
-                method="post">
-                    <input type="hidden" name="authenticity_token"
-                    value="A3kOo-mxypZ-ujUXpnnoDCZzxR7Co8rgmp1BEGBFJ38BigoMqdA4uQ7SFK5qNe_OOY9dMNCq5DGdieT7jhQOpw" autocomplete="off">
                 <div class="form-group">
                 <%= form_with model: @book do |f| %>
                     <label for="book_title">Title</label>
@@ -59,7 +55,7 @@
                              <td><%= link_to @user_path do %><%= image_tag @user.get_profile_image(100,100) %><% end %></td>
                              <td><%= link_to @book_path do %><%= @book.title %><% end %></td>
                              <td><%= @book.body %></td>
-                             <td><%= link_to @edit_book_path,class:"btn btn-sm btn-success edit_book_52720" do %>Edit<% end %></td>
+                             <td><%= link_to edit_book_path,class:"btn btn-sm btn-success edit_book_52720" do %>Edit<% end %></td>
                              <td><%= link_to @books_path do %>
                              <a data-confirm="本当に消しますか？" class="btn btn-sm btn-danger destroy_book_52720" rel="nofollow" data-method="delete">
                              destroy<% end %></td></a>
