@@ -9,7 +9,7 @@ class User < ApplicationRecord
          
          validates :name,length: { in: 2..20 }
          validates :name, uniqueness: true
-         #↓新規登録の時は適用しないようにしたい
+         #↓は新規登録の時は適用しないようにしたい
         # validates :introduction,length: { in: 1..50 }
          
          

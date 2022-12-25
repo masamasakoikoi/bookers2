@@ -426,7 +426,7 @@ Failures:
 
   10) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 ユーザ画像・名前のリンク先が正しい
       [31mFailure/Error: expect(page).to have_link book.user.name, href: user_path(book.user)[0m
-      [31m  expected to find link "5jxurtp30w" with href "/users/2" but there were no matches[0m
+      [31m  expected to find link "g0fayht5kt" with href "/users/2" but there were no matches[0m
       [36m# ./spec/system/02_after_login_spec.rb:121:in `block (4 levels) in <main>'[0m
 
   11) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 投稿のtitleが表示される
@@ -520,7 +520,7 @@ Failures:
 
   16) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト サイドバーの確認 bodyフォームに値が入っていない
       [31mFailure/Error: expect(find_field('book[body]').text).to be_blank[0m
-      [31m  expected `"eq8fzvkpbv60rqnica6w".blank?` to be truthy, got false[0m
+      [31m  expected `"6wf8hdfs5f4uxgs2pzr3".blank?` to be truthy, got false[0m
       [36m# ./spec/system/02_after_login_spec.rb:158:in `block (4 levels) in <main>'[0m
 
   17) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 投稿成功のテスト 自分の新しい投稿が正しく保存される
@@ -597,8 +597,8 @@ Failures:
   22) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 編集成功のテスト titleが正しく更新される
       [31mFailure/Error: expect(book.reload.title).not_to eq @book_old_title[0m
       [31m[0m
-      [31m  expected: value != "7sxvs"[0m
-      [31m       got: "7sxvs"[0m
+      [31m  expected: value != "ckedu"[0m
+      [31m       got: "ckedu"[0m
       [31m[0m
       [31m  (compared using ==)[0m
       [36m# ./spec/system/02_after_login_spec.rb:246:in `block (4 levels) in <main>'[0m
@@ -606,8 +606,8 @@ Failures:
   23) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 編集成功のテスト bodyが正しく更新される
       [31mFailure/Error: expect(book.reload.body).not_to eq @book_old_body[0m
       [31m[0m
-      [31m  expected: value != "1ttnvq8bt9cy3lni6ygd"[0m
-      [31m       got: "1ttnvq8bt9cy3lni6ygd"[0m
+      [31m  expected: value != "y3l404ez1zzuqwb3wxoc"[0m
+      [31m       got: "y3l404ez1zzuqwb3wxoc"[0m
       [31m[0m
       [31m  (compared using ==)[0m
       [36m# ./spec/system/02_after_login_spec.rb:249:in `block (4 levels) in <main>'[0m
@@ -887,7 +887,7 @@ Failures:
 
   41) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 ユーザ画像・名前のリンク先が正しい
       [31mFailure/Error: expect(page).to have_link other_book.user.name, href: user_path(other_book.user)[0m
-      [31m  expected to find link "5lr5cluqqs" with href "/users/1" but there were no matches[0m
+      [31m  expected to find link "mtrig1fik0" with href "/users/1" but there were no matches[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:226:in `block (5 levels) in <main>'[0m
 
   42) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 投稿のtitleが表示される
@@ -1003,7 +1003,7 @@ Failures:
       [31m  expected to find css ".container .row .col-md-8.offset-md-1" but there were no matches[0m
       [36m# ./spec/system/03_finishing_touches_spec.rb:345:in `block (3 levels) in <main>'[0m
 
-Finished in 30 seconds (files took 2.25 seconds to load)
+Finished in 27.97 seconds (files took 4.35 seconds to load)
 [31m199 examples, 50 failures[0m
 
 Failed examples:

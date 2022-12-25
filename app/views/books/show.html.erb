@@ -52,7 +52,7 @@
                  
                      <tbody>
                          <tr>
-                             <td><%= link_to @user_path do %><%= image_tag @user.get_profile_image(100,100) %><% end %></td>
+                             <td><%= link_to user_path(@book.user) do %><%= image_tag @user.get_profile_image(100,100) %><% end %></td>
                              <td><%= link_to @book_path do %><%= @book.title %><% end %></td>
                              <td><%= @book.body %></td>
                              <% if @book.user == current_user %>
