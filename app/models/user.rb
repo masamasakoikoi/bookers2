@@ -10,7 +10,7 @@ class User < ApplicationRecord
          validates :name,length: { in: 2..20 }
          validates :name, uniqueness: true
          #↓は新規登録の時は適用しないようにしたい
-        # validates :introduction,length: { in: 1..50 }
+         validates :introduction,length:{maximum:50}
          
          
         def get_profile_image(width, height)
