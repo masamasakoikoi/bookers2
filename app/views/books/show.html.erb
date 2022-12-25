@@ -49,8 +49,10 @@
                  
                      <tbody>
                          <tr>
-                             <td><%= link_to user_path(@book.user) do %><%= image_tag @user.get_profile_image(100,100) %><% end %>
-                                 <br><%= link_to @user_path do %><%= @user.name %><% end %>
+                             <td><%= link_to user_path(@book.user) do %>
+                             <%= image_tag @user.get_profile_image(100,100) %><br><%= @user.name %>
+                             <% end %>
+                                 <%#= link_to @user_path do %><%# end %>
                              </td>
                              <td><%= link_to @book_path do %><%= @book.title %><% end %></td>
                              <td><%= @book.body %></td>
