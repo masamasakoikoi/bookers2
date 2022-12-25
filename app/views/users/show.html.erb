@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <h2>User info</h2>
-                    <img src="">
+                    <%= image_tag current_user.get_profile_image(100,100) %>
                     <table class="table">
                         <tbody>
                             <tr></tr>
@@ -60,7 +60,7 @@
                   <% @books.each do |book| %>
                      <tbody>
                          <tr>
-                             <td><%= link_to @user_path do %><%= image_tag @user.get_profile_image(100,100) %><% end %></td>
+                             <td><%= link_to user_path (@user)do %><%= image_tag @user.get_profile_image(100,100) %><% end %></td>
                              <td><%= link_to book_path(book) do %><%= book.title %><% end %></td>
                              <td><%= book.body %></td>
                     <% end %>
